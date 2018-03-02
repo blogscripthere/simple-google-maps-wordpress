@@ -1,10 +1,10 @@
 <?php
 /**
- * @package Share_Link_On_Social_Media
+ * @package Simple_WP_Google_Maps
  * @version 1.0
  */
 /*
-Plugin Name: ScriptHere's Simple Google Maps with Rich Snippets.
+Plugin Name: ScriptHere's Simple WordPress Google Maps with Rich Snippets.
 Plugin URI: https://github.com/blogscripthere/simple-google-maps-wordpress
 Description: Simple Google Maps to WordPress posts, pages and text widgets.
 Author: Narendra Padala
