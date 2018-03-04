@@ -21,7 +21,7 @@ echo "<span id='shgm' style='display: none;'><a href='http://scripthere.com/'>Sc
 /**
  * define google maps api key
  */
-define('GOOGLE_MAPS_API_KEY','AIzaSyDxAuM_Z9ZPwM-OctCelnOhTwU0w50fEXA');
+define('GOOGLE_MAPS_API_KEY','your google maps api key');
 
 /**
  * Enqueue required javascript libraries to implement google maps integration callback
