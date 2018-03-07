@@ -128,7 +128,16 @@ function load_custom_google_map(){
         $longitude = $response['longitude'];
         //display message
         echo "<span style='color: red;'><i>Note: Use following short code to genarate map on post,page and text widget..!</i></span><br/>";
-        echo '<span style="color:crimson;"><i><b>Short Code: [display_map lat="'.$latitude.'" lng="'.$longitude.'" map_id="'.$map_id.'" width="100%" height="50%" zoom="8"]</b></i></span><br/>';
+        echo '<span style="color:crimson;"><i><b>Short Code: <span id="sh_insert_into_post_shortcode">[display_map lat="'.$latitude.'" lng="'.$longitude.'" map_id="'.$map_id.'" width="100%" height="50%" zoom="8"]</span></b></i><button id="sh_insert_into_post" name="sh_insert_into_post" value="sh_insert_into_post" onclick="insert_into_post()" type="button"> insert into post </button></span><br/>';
+        //auto insert to post
+        echo "<script type='text/javascript'>
+                jQuery(document).ready(function() {
+                    jQuery('#sh_insert_into_post').on('click', function(e) {
+                        var shortcode = jQuery('#sh_insert_into_post_shortcode').text();
+                        tinymce.execCommand('mceInsertContent', false, shortcode);
+                    });
+                });
+            </script>";
         //display desired map
         echo sh_display_google_map(array('lat'=>$latitude,'lng'=>$longitude)); exit;
     }else{
